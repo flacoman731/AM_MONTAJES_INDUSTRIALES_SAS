@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AM Montajes Industriales S.A.S</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(to right, #1f2c3d, #2e4057);
+      color: #333;
+    }
+
+    .navbar-custom {
+      background-color: #0d1b2a;
+    }
+
+    .brand-orange {
+      color: #f77f00;
+      font-weight: bold;
+    }
+
+    .card-custom {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .btn-industrial {
+      background-color: #f77f00;
+      color: white;
+      border: none;
+    }
+
+    .btn-industrial:hover {
+      background-color: #d62828;
+      color: white;
+    }
+
+    footer {
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom shadow">
+    <div class="container-fluid">
+      <button class="btn btn-outline-light me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#menuLateral">
+        ☰
+      </button>
+      <span class="navbar-brand">
+        AM <span class="brand-orange">MONTAJES INDUSTRIALES S.A.S</span>
+      </span>
+    </div>
+  </nav>
+
+  <!-- MENÚ LATERAL -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="menuLateral">
+    <div class="offcanvas-header bg-dark text-white">
+      <h5 class="offcanvas-title">Menú Principal</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#">🏠 Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">👥 Clientes</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">🏗 Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">📊 Reportes</a></li>
+        <li class="nav-item"><a class="nav-link text-danger" href="#">🚪 Cerrar Sesión</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONTENIDO -->
+  <div class="container mt-5">
+    <div class="card card-custom">
+      <div class="card-body">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div>
+            <h3 class="fw-bold">Gestión de Clientes</h3>
+            <p class="text-muted mb-0">Administración de clientes industriales</p>
+          </div>
+          <button class="btn btn-industrial" data-bs-toggle="modal" data-bs-target="#modalCliente">
+            + Nuevo Cliente
+          </button>
+        </div>
+
+        <div class="table-responsive">
+          <table class="table table-hover align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th>#</th>
+                <th>Empresa</th>
+                <th>Correo</th>
+                <th>Teléfono</th>
+                <th>Ciudad</th>
+                <th class="text-center">Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Metalúrgica Andina</td>
+                <td>contacto@metalurgica.com</td>
+                <td>3004567890</td>
+                <td>Bogotá</td>
+                <td class="text-center">
+                  <button class="btn btn-sm btn-warning">Editar</button>
+                  <button class="btn btn-sm btn-danger">Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Constructora Industrial SAS</td>
+                <td>info@constructora.com</td>
+                <td>3109876543</td>
+                <td>Medellín</td>
+                <td class="text-center">
+                  <button class="btn btn-sm btn-warning">Editar</button>
+                  <button class="btn btn-sm btn-danger">Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="modalCliente" tabindex="-1">
+    <div class="modal-dialog">
+      <form class="modal-content">
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title">Registrar Nuevo Cliente</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label class="form-label">Nombre Empresa</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Teléfono</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Ciudad</label>
+            <input type="text" class="form-control" required>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-industrial">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="text-center mt-5 mb-3">
+    © 2026 AM Montajes Industriales S.A.S | Desarrollado por Juan Sebastián López Martínez
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

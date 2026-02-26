@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AM Montajes Industriales S.A.S | Login</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #1f2c3d, #2e4057);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* TEXTO GRANDE DE FONDO */
+        body::before {
+            content: "AM MONTAJES";
+            position: absolute;
+            font-size: 120px;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.05);
+            letter-spacing: 10px;
+            white-space: nowrap;
+        }
+
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-title {
+            font-weight: bold;
+            color: #0d1b2a;
+        }
+
+        .brand-orange {
+            color: #f77f00;
+        }
+
+        .btn-industrial {
+            background-color: #f77f00;
+            border: none;
+            color: white;
+        }
+
+        .btn-industrial:hover {
+            background-color: #d62828;
+        }
+
+        .small-link {
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .small-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-card col-md-4">
+        <div class="text-center mb-4">
+            <h4 class="brand-title">
+                AM <span class="brand-orange">MONTAJES INDUSTRIALES S.A.S</span>
+            </h4>
+            <p class="text-muted">Sistema de Gestión Empresarial</p>
+        </div>
+
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" placeholder="nombre@empresa.com" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input type="password" class="form-control" placeholder="Ingrese su contraseña" required>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="recordarme">
+                <label class="form-check-label" for="recordarme">Recordarme</label>
+            </div>
+
+            <button type="submit" class="btn btn-industrial w-100">Iniciar Sesión</button>
+        </form>
+
+        <div class="text-center mt-3">
+            <a href="#" class="small-link text-secondary">¿Olvidó su contraseña?</a>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
